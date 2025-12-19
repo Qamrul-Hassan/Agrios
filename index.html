@@ -40,14 +40,13 @@
 <header class="fixed top-0 left-0 w-full z-50 bg-transparent">
   <div class="container mx-auto px-6 flex items-center justify-between h-20">
 
-    <!-- Left: Logo and Branding -->
+    <!-- Logo -->
     <div class="flex items-center gap-3">
-      <img src="./images/logo-home.png" alt="Agrinos Logo" class="h-20 w-auto">
-     
+      <img src="./images/logo-home.png" alt="Agrinos Logo" class="h-16 w-auto">
     </div>
 
     <!-- Desktop Nav -->
-    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-green-400 ">
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-green-400">
       <a href="#" class="hover:text-white">Home</a>
       <a href="#" class="hover:text-white">About</a>
       <a href="#" class="flex items-center gap-1 hover:text-white">Solutions <span class="text-xs">▼</span></a>
@@ -57,7 +56,7 @@
       <a href="#" class="hover:text-white">Contact</a>
     </nav>
 
-    <!-- Right: Icons and User Info (Desktop) -->
+    <!-- Desktop Icons -->
     <div class="hidden lg:flex items-center gap-6 text-white text-sm">
       <button class="hover:text-green-400"><i class="fas fa-search"></i></button>
       <button class="relative hover:text-green-400">
@@ -66,18 +65,19 @@
       </button>
       <div class="flex items-center gap-2">
         <i class="fas fa-user text-lg"></i>
-        <span>Welcome, <strong>Hi </strong> (guest_user)</span>
+        <span>Welcome, <strong>Hi</strong> (guest_user)</span>
       </div>
     </div>
 
     <!-- Mobile Burger -->
-    <button id="menu-btn" class="lg:hidden text-white text-2xl focus:outline-none">
+    <button id="menu-btn" class="lg:hidden text-white text-4xl focus:outline-none m-4">
       <i class="fas fa-bars"></i>
     </button>
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden lg:hidden bg-black/90 text-white px-6 py-6 space-y-4">
+  <div id="mobile-menu" 
+       class="hidden fixed top-20 left-0 w-full h-[calc(100vh-5rem)] overflow-y-auto bg-black/90 text-white px-6 py-6 space-y-4 transition-all duration-300">
     <a href="#" class="block hover:bg-green-400 rounded-lg text-center">Home</a>
     <a href="#" class="block hover:bg-green-400 rounded-lg text-center">About</a>
     <a href="#" class="block hover:bg-green-400 rounded-lg text-center">Solutions</a>
@@ -93,11 +93,14 @@
       </button>
       <div class="flex items-center gap-2">
         <i class="fas fa-user text-lg"></i>
-        <span>Welcome, <strong>Hello </strong></span>
+        <span>Welcome, <strong>Hello</strong></span>
       </div>
     </div>
   </div>
 </header>
+
+
+
 
 
 <!-- ================= HERO ================= -->
