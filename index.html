@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Agrica – Organic Agriculture</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./dist/output.css">
   <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
@@ -43,769 +44,783 @@
     }
   </style>
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: "#4CAF50",
-            dark: "#1f2937",
-            light: "#f7f9f4",
-            accent: "#f6c667",
-          },
-          fontFamily: {
-            poppins: ["Poppins", "sans-serif"],
-            shadows: ["Shadows Into Light Two", "cursive"],
-          },
-          container: {
-            center: true,
-            padding: {
-              DEFAULT: '1.5rem',
-              sm: '2rem',
-              lg: '4rem',
-              xl: '5rem',
-              '2xl': '6rem',
-            },
-          },
-        },
-      },
-    };
-  </script>
+
 </head>
 
 <body class="font-poppins text-gray-800">
 
-<!-- ================= NAVBAR ================= -->
-<header class="fixed top-0 left-0 w-full z-50 bg-none backdrop-blur-sm shadow-sm">
-  <div class="container mx-auto px-4 sm:px-6 flex items-center justify-between h-20">
-    <!-- Logo -->
-    <div class="flex items-center gap-3 z-50">
-      <img src="./images/logo-home.png" alt="Agrinos Logo" class="h-12 sm:h-16 w-auto">
-    </div>
-
-    <!-- Desktop Nav -->
-    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-green-400">
-      <a href="#" class="hover:text-primary transition-colors">Home</a>
-      <a href="#" class="hover:text-primary transition-colors">About</a>
-      <a href="#" class="flex items-center gap-1 hover:text-primary transition-colors">
-        Solutions <span class="text-xs">▼</span>
-      </a>
-      <a href="#" class="flex items-center gap-1 hover:text-primary transition-colors">
-        Products <span class="text-xs">▼</span>
-      </a>
-      <a href="#" class="flex items-center gap-1 hover:text-primary transition-colors">
-        Science <span class="text-xs">▼</span>
-      </a>
-      <a href="#" class="flex items-center gap-1 hover:text-primary transition-colors">
-        Shop <span class="text-xs">▼</span>
-      </a>
-      <a href="#" class="hover:text-primary transition-colors">Contact</a>
-    </nav>
-
-    <!-- Desktop Icons -->
-    <div class="hidden lg:flex items-center gap-6 text-dark text-sm text-gray-400">
-      <button class="hover:text-primary transition-colors">
-        <i class="fas fa-search"></i>
-      </button>
-      <button class="relative hover:text-primary transition-colors">
-        <i class="fas fa-shopping-cart"></i>
-        <span class="absolute -top-2 -right-3 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
-      </button>
-      <div class="flex items-center gap-2 text-gray-400">
-        <i class="fas fa-user text-lg"></i>
-        <span>Welcome, <strong>Hi</strong> (guest_user)</span>
+  <!-- ================= NAVBAR ================= -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-none backdrop-blur-sm shadow-sm">
+    <div class="container mx-auto px-4 sm:px-6 flex items-center justify-between h-20">
+      <!-- Logo -->
+      <div class="flex items-center gap-3 z-50">
+        <img src="./images/logo-home.png" alt="Agrinos Logo" class="h-12 sm:h-16 w-auto">
       </div>
-    </div>
 
-    <!-- Mobile Burger Button - Fixed positioning -->
-    <button id="menu-btn" class="lg:hidden text-dark text-3xl focus:outline-none z-50">
-      <i class="fas fa-bars"></i>
-    </button>
-  </div>
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-green-400">
+        <a href="#" class="hover:text-primary transition-colors">Home</a>
+        <a href="#" class="hover:text-primary transition-colors">About</a>
+        <a href="#" class="flex items-center gap-1 hover:text-primary transition-colors">
+          Solutions <span class="text-xs">▼</span>
+        </a>
+        <a href="#" class="flex items-center gap-1 hover:text-primary transition-colors">
+          Products <span class="text-xs">▼</span>
+        </a>
+        <a href="#" class="flex items-center gap-1 hover:text-primary transition-colors">
+          Science <span class="text-xs">▼</span>
+        </a>
+        <a href="#" class="flex items-center gap-1 hover:text-primary transition-colors">
+          Shop <span class="text-xs">▼</span>
+        </a>
+        <a href="#" class="hover:text-primary transition-colors">Contact</a>
+      </nav>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" 
-       class="hidden fixed inset-0 w-full h-screen bg-black/60
-      <a href="#" class="block py-4 text-center text-lg hover:text-primary border-b border-gray-700">Shop</a>
-      <a href="#" class="block py-4 text-center text-lg hover:text-primary border-b border-gray-700">Contact</a>
-      
-      <div class="flex justify-center items-center gap-6 pt-8 border-t border-gray-700">
-        <button class="hover:text-primary text-xl">
+      <!-- Desktop Icons -->
+      <div class="hidden lg:flex items-center gap-6 text-dark text-sm">
+        <button class="hover:text-primary transition-colors">
           <i class="fas fa-search"></i>
         </button>
-        <button class="relative hover:text-primary text-xl">
+        <button class="relative hover:text-primary transition-colors">
           <i class="fas fa-shopping-cart"></i>
-          <span class="absolute -top-2 -right-3 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+          <span
+            class="absolute -top-2 -right-3 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
         </button>
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-2 text-gray-400">
           <i class="fas fa-user text-lg"></i>
-          <span>Welcome, <strong>Guest</strong></span>
+          <span>Welcome, <strong>Hi</strong> (guest_user)</span>
         </div>
       </div>
+
+      <!-- Mobile Burger Button - Fixed positioning -->
+      <button id="menu-btn" class="lg:hidden text-primary text-3xl focus:outline-none z-50">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
-  </div>
-</header>
 
-<!-- ================= HERO ================= -->
-<section class="relative min-h-screen w-full pt-20">
-  <!-- HERO IMAGE -->
-  <img 
-    src="./images/hero.png" 
-    alt="Agriculture Hero"
-    class="absolute inset-0 w-full h-full object-cover"
-  >
+    <!-- Mobile Menu -->
+    
+    <div id="mobile-menu" class="hidden fixed inset-0 w-full h-screen z-40">
+      <!-- Background overlay -->
+      <div class="absolute inset-0 bg-black/80"></div>
 
-  <!-- DARK OVERLAY -->
-  <div class="absolute inset-0 bg-black/40"></div>
+      <!-- Close button -->
+      <button onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+        class="absolute top-24 right-6 text-white hover:text-accent text-3xl z-50">
+        <i class="fas fa-times"></i>
+      </button>
 
-  <!-- CONTENT - FIXED POSITIONING -->
-  <div class="relative z-10 h-full flex items-center justify-center pt-96 lg:pt-96">
-    <div class="container mx-auto px-4 sm:px-6">
-      <div class="text-white max-w-2xl mx-auto text-center lg:text-left">
-        <p class="uppercase tracking-widest text-lg mb-4 text-center font-shadows text-primary ">
-          Welcome to Agriculture
-        </p>
-
-        <h1 class="text-4xl sm:text-5xl md:text-5xl font-bold leading-tight text-center">
-          Healthy Life <br>
-          With Fresh Products
-        </h1>
-
-        <p class="mt-6 text-lg text-gray-200 text-center">
-          We provide fresh organic products directly from farms.
-        </p>
-
-       
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ORGANIC FARM SECTION -->
-<section class="py-16 sm:py-20 bg-white bg-no-repeat bg-[right_bottom]"
-         style="background-image: url('./images/leaf.png'); 
-                background-size: auto 200px;
-                background-size: auto 500px;">
-  <div class="container mx-auto px-4 sm:px-6">
-    <div class="flex flex-col lg:flex-row items-center lg:items-stretch gap-10 lg:gap-16">
-      <!-- LEFT IMAGE -->
-      <div class="w-full lg:w-1/3">
-        <img
-          src="./images/1.png"
-          alt="Organic Farming"
-          class="w-full h-96 sm:h-100 object-cover rounded-lg shadow-lg"
-        />
-      </div>
-
-      <!-- CENTER CONTENT -->
-      <div class="w-full lg:w-1/3 text-center lg:text-left">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
-          Best Organic <br> Agriculture Firms
-        </h2>
-
-        <p class="text-gray-600 leading-relaxed mt-4 sm:mt-6">
-          Give lady of they such they sure it. Me contained explained my education.
-          Vulgar as hearts by garret. Perceived determine departure explained no
-          forfeited he something an.
-        </p>
-
-        <!-- CHECK LIST -->
-        <div class="space-y-3 mt-6">
-          <div class="flex items-center gap-3 justify-center lg:justify-start">
-            <span class="w-5 h-5 rounded-full bg-primary flex items-center justify-center text-white">✓</span>
-            <span class="text-gray-600">Best Quality Standards</span>
-          </div>
-
-          <div class="flex items-center gap-3 justify-center lg:justify-start">
-            <span class="w-5 h-5 rounded-full bg-primary flex items-center justify-center text-white">✓</span>
-            <span class="text-gray-600">Natural Healthy Products</span>
+      <!-- Menu content container - starts right after navbar -->
+      <div class="relative h-full flex flex-col pt-20 px-6">
+        <!-- Navigation Links -->
+        <div class="flex-1 flex flex-col justify-center items-center">
+          <div class="w-full max-w-md text-center space-y-4 ">
+            <a href="/index.html"
+              class="block py-4 text-2xl font-semibold text-white hover:text-primary transition-colors">Home</a>
+            <a href="/about.html"
+              class="block py-4 text-2xl font-semibold text-white hover:text-primary transition-colors">About</a>
+            <a href="/solutions.html"
+              class="block py-4 text-2xl font-semibold text-white hover:text-primary transition-colors">Solutions</a>
+            <a href="/products.html"
+              class="block py-4 text-2xl font-semibold text-white hover:text-primary transition-colors">Products</a>
+            <a href="/science.html"
+              class="block py-4 text-2xl font-semibold text-white hover:text-primary transition-colors">Science</a>
+            <a href="#"
+              class="block py-4 text-2xl font-semibold text-white hover:text-primary transition-colors">Shop</a>
+            <a href="#"
+              class="block py-4 text-2xl font-semibold text-white hover:text-primary transition-colors">Contact</a>
           </div>
         </div>
 
-        <!-- BUTTON -->
-        <button class="mt-8 bg-accent text-black font-medium px-8 py-4 rounded-md hover:bg-[#eab84f] transition-colors">
-          Discover More
-        </button>
-      </div>
-
-      <!-- RIGHT FLOATING CARD -->
-      <div class="w-full lg:w-1/3">
-        <div class="bg-gray-50/20 rounded-xl p-8 shadow-lg max-w-sm mx-auto">
-          <ul class="space-y-6">
-            <li class="flex items-center gap-5">
-              <img src="./images/blueberry.png" class="w-12 h-12 object-contain" alt="Blueberry">
-              <span class="text-xl text-gray-800 font-medium">Blueberry</span>
-            </li>
-            <li class="flex items-center gap-5">
-              <img src="./images/strawberry.png" class="w-12 h-12 object-contain" alt="Strawberry">
-              <span class="text-xl text-gray-800 font-medium">Strawberry</span>
-            </li>
-            <li class="flex items-center gap-5">
-              <img src="./images/maize.png" class="w-12 h-12 object-contain" alt="Maize">
-              <span class="text-xl text-gray-800 font-medium">Maize</span>
-            </li>
-            <li class="flex items-center gap-5">
-              <img src="./images/apple.png" class="w-12 h-12 object-contain" alt="Apples">
-              <span class="text-xl text-gray-800 font-medium">Apples</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY CHOOSE US -->
-<section class="min-h-150">
-  <div class="flex flex-col lg:flex-row">
-    <!-- LEFT GREEN PANEL -->
-    <div class="bg-primary w-full lg:w-1/2 px-6 sm:px-10 lg:px-20 py-12 sm:py-20">
-      <div class="max-w-xl mx-auto space-y-10">
-        <!-- ITEM -->
-        <div class="flex flex-col sm:flex-row gap-5 items-center sm:items-start text-center sm:text-left">
-          <div class="shrink-0">
-            <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
-              <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8.25 8.25a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414l3.293 3.293 7.543-7.543a1 1 0 011.414 0z" clip-rule="evenodd"/>
-              </svg>
+        <!-- Bottom Icons with FIXED basket count position -->
+        <div class="pb-12 pt-8 border-t border-white/30">
+          <div class="flex justify-center items-center gap-8">
+            <button class="text-white hover:text-accent text-2xl transition-colors">
+              <i class="fas fa-search"></i>
+            </button>
+            <button class="relative text-white hover:text-accent text-2xl transition-colors">
+              <i class="fas fa-shopping-cart"></i>
+              <!-- FIXED basket count position -->
+              <span
+                class="absolute -top-4 -right-2.5 bg-primary text-black text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">0</span>
+            </button>
+            <div class="flex items-center gap-3 text-white text-lg">
+              <i class="fas fa-user text-primary"></i>
+              <span>Welcome, <strong class="text-primary">Guest</strong></span>
             </div>
           </div>
-          <div>
-            <h4 class="text-white text-xl font-semibold mb-2">Always Fresh</h4>
-            <p class="text-white/90">
-              Continued at up to zealously necessary breakfast. Surrounded sir
-              motionless she end literature.
-            </p>
-          </div>
-        </div>
-
-        <!-- ITEM -->
-        <div class="flex flex-col sm:flex-row gap-5 items-center sm:items-start text-center sm:text-left">
-          <div class="shrink-0">
-            <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
-              <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8.25 8.25a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414l3.293 3.293 7.543-7.543a1 1 0 011.414 0z" clip-rule="evenodd"/>
-              </svg>
-            </div>
-          </div>
-          <div>
-            <h4 class="text-white text-xl font-semibold mb-2">All Organic</h4>
-            <p class="text-white/90">
-              Continued at up to zealously necessary breakfast. Surrounded sir
-              motionless she end literature.
-            </p>
-          </div>
-        </div>
-
-        <!-- ITEM -->
-        <div class="flex flex-col sm:flex-row gap-5 items-center sm:items-start text-center sm:text-left">
-          <div class="shrink-0">
-            <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
-              <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8.25 8.25a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414l3.293 3.293 7.543-7.543a1 1 0 011.414 0z" clip-rule="evenodd"/>
-              </svg>
-            </div>
-          </div>
-          <div>
-            <h4 class="text-white text-xl font-semibold mb-2">Eco Friendly</h4>
-            <p class="text-white/90">
-              Continued at up to zealously necessary breakfast. Surrounded sir
-              motionless she end literature.
-            </p>
-          </div>
         </div>
       </div>
     </div>
+  </header>
 
-    <!-- RIGHT BLACK PANEL -->
-    <div class="bg-white w-full lg:w-1/2 px-6 sm:px-10 lg:px-20 py-12 sm:py-20">
-      <div class="flex flex-col lg:flex-row gap-12 items-center">
-        <!-- TEXT + STATS -->
-        <div class="text-center lg:text-left">
-          <p class="text-primary mb-4 text-2xl font-shadows">
-            Why Choose Us
+  <!-- ================= HERO ================= -->
+  <section class="relative min-h-screen w-full pt-20">
+    <!-- HERO IMAGE -->
+    <img src="./images/hero.png" alt="Agriculture Hero" class="absolute inset-0 w-full h-full object-cover">
+
+    <!-- DARK OVERLAY -->
+    <div class="absolute inset-0 bg-black/40"></div>
+
+    <!-- CONTENT - FIXED POSITIONING -->
+    <div class="relative z-10 h-full flex items-center justify-center pt-96 lg:pt-96">
+      <div class="container mx-auto px-4 sm:px-6">
+        <div class="text-white max-w-2xl mx-auto text-center lg:text-left">
+          <p class="uppercase tracking-widest text-lg mb-4 text-center font-shadows text-primary ">
+            Welcome to Agriculture
           </p>
 
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight mb-8">
-            Growing crops and <br> raising livestock.
+          <h1 class="text-4xl sm:text-5xl md:text-5xl font-bold leading-tight text-center">
+            Healthy Life <br>
+            With Fresh Products
+          </h1>
+
+          <p class="mt-6 text-lg text-gray-200 text-center">
+            We provide fresh organic products directly from farms.
+          </p>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORGANIC FARM SECTION -->
+  <section class="py-16 sm:py-20 bg-white bg-no-repeat bg-[right_bottom]" style="background-image: url('./images/leaf.png'); 
+                background-size: auto 200px;
+                background-size: auto 500px;">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="flex flex-col lg:flex-row items-center lg:items-stretch gap-10 lg:gap-16">
+        <!-- LEFT IMAGE -->
+        <div class="w-full lg:w-1/3">
+          <img src="./images/1.png" alt="Organic Farming"
+            class="w-full h-96 sm:h-100 object-cover rounded-lg shadow-lg" />
+        </div>
+
+        <!-- CENTER CONTENT -->
+        <div class="w-full lg:w-1/3 text-center lg:text-left">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
+            Best Organic <br> Agriculture Firms
           </h2>
 
-          <div class="flex flex-col sm:flex-row gap-10 justify-center lg:justify-start">
-            <div class="text-center">
-              <h3 class="text-5xl font-bold text-accent">38K</h3>
-              <p class="text-gray-500 mt-2">Trusted Customers</p>
+          <p class="text-gray-600 leading-relaxed mt-4 sm:mt-6">
+            Give lady of they such they sure it. Me contained explained my education.
+            Vulgar as hearts by garret. Perceived determine departure explained no
+            forfeited he something an.
+          </p>
+
+          <!-- CHECK LIST -->
+          <div class="space-y-3 mt-6">
+            <div class="flex items-center gap-3 justify-center lg:justify-start">
+              <span class="w-5 h-5 rounded-full bg-primary flex items-center justify-center text-white">✓</span>
+              <span class="text-gray-600">Best Quality Standards</span>
             </div>
 
-            <div class="text-center">
-              <h3 class="text-5xl font-bold text-accent">28M</h3>
-              <p class="text-gray-500 mt-2">Growth Tons of Harvest</p>
+            <div class="flex items-center gap-3 justify-center lg:justify-start">
+              <span class="w-5 h-5 rounded-full bg-primary flex items-center justify-center text-white">✓</span>
+              <span class="text-gray-600">Natural Healthy Products</span>
             </div>
           </div>
-        </div>
 
-        <!-- IMAGE WITH PLAY BUTTON -->
-        <div class="relative w-full max-w-md">
-          <img
-            src="./images/4.jpg.png"
-            alt="Video"
-            class="rounded-lg w-full h-75 sm:h-80 object-cover"
-          />
-
-          <div class="absolute inset-0 flex items-center justify-center">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-accent flex items-center justify-center shadow-lg cursor-pointer hover:scale-110 transition-transform">
-              <svg class="w-6 h-6 sm:w-8 sm:h-8 text-black ml-1" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M6 4l10 6-10 6V4z"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRODUCT SECTION -->
-<section class="py-16 sm:py-24 bg-gray-50">
-  <div class="container mx-auto px-4 sm:px-6">
-    <!-- TITLE -->
-    <h2 class="text-center text-3xl sm:text-4xl md:text-5xl font-medium text-yellow-800 mb-16 sm:mb-28 font-shadows">
-      Healthy Life With <br> Fresh Products
-    </h2>
-
-    <!-- GRID -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- CARD -->
-      <div class="relative h-80 sm:h-96 rounded-2xl shadow-lg overflow-visible group">
-        <img
-          src="./images/wheat.png"
-          alt="Agriculture"
-          class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
-        >
-
-        <!-- FLOATING LABEL -->
-        <div class="absolute left-1/2 -bottom-6 sm:-bottom-12 -translate-x-1/2 w-[90%] sm:w-[85%] bg-white rounded-xl shadow-md flex items-center gap-4 px-4 sm:px-6 py-4">
-          <div class="bg-primary w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center shrink-0">
-            <i class="fa-solid fa-wheat-awn text-white text-lg sm:text-xl"></i>
-          </div>
-          <div>
-            <h4 class="text-lg sm:text-xl text-gray-800 font-shadows">
-              Agriculture
-            </h4>
-            <p class="text-primary text-xs sm:text-sm font-medium tracking-wide">
-              PRODUCTS
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- CARD -->
-      <div class="relative h-80 sm:h-96 rounded-2xl shadow-lg overflow-visible group">
-        <img
-          src="./images/vegetables.png"
-          alt="Fresh Vegetable"
-          class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
-        >
-
-        <div class="absolute left-1/2 -bottom-6 sm:-bottom-12 -translate-x-1/2 w-[90%] sm:w-[85%] bg-white rounded-xl shadow-md flex items-center gap-4 px-4 sm:px-6 py-4">
-          <div class="bg-primary w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center shrink-0">
-            <i class="fa-solid fa-carrot text-white text-lg sm:text-xl"></i>
-          </div>
-          <div>
-            <h4 class="text-lg sm:text-xl text-gray-800 font-shadows">
-              Fresh
-            </h4>
-            <p class="text-primary text-xs sm:text-sm font-medium tracking-wide">
-              VEGETABLE
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- CARD -->
-      <div class="relative h-80 sm:h-96 rounded-2xl shadow-lg overflow-visible group">
-        <img
-          src="./images/honey.png"
-          alt="Organic Products"
-          class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
-        >
-
-        <div class="absolute left-1/2 -bottom-6 sm:-bottom-12 -translate-x-1/2 w-[90%] sm:w-[85%] bg-white rounded-xl shadow-md flex items-center gap-4 px-4 sm:px-6 py-4">
-          <div class="bg-primary w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center shrink-0">
-            <i class="fa-solid fa-jar text-white text-lg sm:text-xl"></i>
-          </div>
-          <div>
-            <h4 class="text-lg sm:text-xl text-gray-800 font-shadows">
-              Organic
-            </h4>
-            <p class="text-primary text-xs sm:text-sm font-medium tracking-wide">
-              PRODUCTS
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FARMING SINCE SECTION -->
-<section class="relative py-16 sm:py-32 bg-center bg-cover bg-gray-100">
-  <div class="absolute inset-0 bg-black/10"></div>
-  <div class="relative z-10 container mx-auto px-4 sm:px-6 text-center">
-    <!-- SMALL TOP TEXT -->
-    <p class="text-base sm:text-lg tracking-widest mb-4 text-gray-600 font-shadows">
-      Since 1866
-    </p>
-
-    <!-- MAIN TITLE -->
-    <h2 class="text-3xl sm:text-4xl md:text-6xl font-medium mb-6 leading-tight text-primary font-shadows">
-      Farming Have Been <br> Since 1866
-    </h2>
-
-    <!-- DECORATIVE LINE -->
-    <div class="flex justify-center mb-8">
-      <span class="w-24 h-1 bg-primary rounded-full"></span>
-    </div>
-
-    <!-- DESCRIPTION -->
-    <p class="max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed">
-      We are committed to providing fresh, organic, and sustainable agricultural
-      products grown with care and tradition passed down for generations.
-    </p>
-  </div>
-</section>
-
-<!-- FAQ SECTION -->
-<section class="bg-white py-16 sm:py-24">
-  <div class="container mx-auto px-4 sm:px-6">
-    <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
-      <!-- Left: Image with FAQ overlay + logo -->
-      <div class="relative w-full lg:w-1/2 h-96 sm:h-125 overflow-hidden rounded-xl shadow-lg">
-        <img src="./images/f.png" alt="Combine Harvester in Field" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-black/40"></div>
-        <div class="absolute inset-0 flex items-center justify-center">
-          <h2 class="bg-primary/30 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-6xl sm:text-7xl md:text-8xl lg:text-[110px] font-extrabold tracking-widest uppercase leading-none text-shadow">
-            FAQ
-          </h2>
-        </div>
-        <div class="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-primary px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow-lg">
-          <img src="./images/Link → logo-light.png.png" alt="Agrica Logo" class="h-8 sm:h-10 w-auto">
-        </div>
-      </div>
-
-      <!-- Right: FAQ Content -->
-      <div class="w-full lg:w-1/2 bg-gray-50 p-6 sm:p-8 rounded-xl shadow-md">
-        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-6">Learn more about growing process</h3>
-
-        <div class="space-y-6">
-          <!-- Question 1: Expanded -->
-          <div>
-            <h4 class="text-base sm:text-lg font-semibold text-gray-700 mb-3">— What do you add to the soil before you plant?</h4>
-            <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
-              Bennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under fully death wrote cause her way spite. Plan upon yet way get cold spot its week.
-            </p>
-          </div>
-
-          <!-- Question 2: Collapsed -->
-          <div>
-            <h4 class="text-base sm:text-lg font-semibold text-gray-700 cursor-pointer hover:text-primary transition-colors">
-              + Do you use herbicides?
-            </h4>
-          </div>
-
-          <!-- Question 3: Collapsed -->
-          <div>
-            <h4 class="text-base sm:text-lg font-semibold text-gray-700 cursor-pointer hover:text-primary transition-colors">
-              + Where does the water come on your crops?
-            </h4>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- GALLERY SECTION - FIXED -->
-<section class="bg-[#f5f8f5] py-16 sm:py-24">
-  <div class="container mx-auto px-4 sm:px-6">
-    <!-- Section Title -->
-    <div class="text-center mb-12">
-      <h2 class="text-xl sm:text-2xl font-bold text-primary mb-2 font-shadows">Awesome Gallery</h2>
-      <p class="text-3xl sm:text-4xl md:text-5xl text-gray-800">Explore Projects</p>
-    </div>
-
-    <!-- Collage Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-      <!-- Top left (FRUIT - Healthy Food) spans 2 columns -->
-      <div class="relative md:col-span-2 overflow-hidden rounded-xl shadow-lg group">
-        <img src="./images/hero.png" alt="FRUIT - Healthy Food" 
-             class="w-full h-90 md:h-100 object-cover transition-transform duration-500 group-hover:scale-105">
-        <!-- Overlay -->
-        <div class="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent"></div>
-        <div class="absolute bottom-0 left-0 p-4 sm:p-5 text-white">
-          <div class="text-xs sm:text-sm tracking-[0.2em] font-semibold text-accent mb-1">FRUIT</div>
-          <div class="text-lg sm:text-xl md:text-2xl font-medium font-shadows">Healthy Food</div>
-        </div>
-      </div>
-
-      <!-- Top right (VEGETABLES - Organic Vegetables) -->
-      <div class="relative overflow-hidden rounded-xl shadow-lg group">
-        <img src="./images/g-2.png" alt="VEGETABLES - Organic Vegetables" class="w-full h-full md:h-100 object-cover transition-transform duration-500 group-hover:scale-105">
-        <!-- Overlay -->
-        <div class="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent"></div>
-        <div class="absolute bottom-0 left-0 p-4 sm:p-5 text-white">
-          <div class="text-xs sm:text-sm tracking-[0.2em] font-semibold text-accent mb-1">VEGETABLES</div>
-          <div class="text-lg sm:text-xl md:text-2xl font-medium font-shadows">Organic Vegetables</div>
-        </div>
-      </div>
-
-      <!-- Bottom left (HAVEST - Crispy Cucumber) -->
-      <div class="relative overflow-hidden rounded-xl shadow-lg group">
-        <img src="./images/g-3.png" alt="HAVEST - Crispy Cucumber" class="w-full h-full md:h-100 object-cover transition-transform duration-500 group-hover:scale-105">
-        <!-- Overlay -->
-        <div class="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent"></div>
-        <div class="absolute bottom-0 left-0 p-4 text-white">
-          <div class="text-xs sm:text-sm tracking-[0.2em] font-semibold text-accent mb-1">HAVEST</div>
-          <div class="text-lg sm:text-xl md:text-2xl font-medium font-shadows">Crispy Cucumber</div>
-        </div>
-      </div>
-
-      <!-- Bottom center (MAIZE - Fresh Corn) -->
-      <div class="relative overflow-hidden rounded-xl shadow-lg group">
-        <img src="./images/g-4.png" alt="MAIZE - Fresh Corn" class="w-full h-full md:h-100 object-cover transition-transform duration-500 group-hover:scale-105">
-        <!-- Overlay -->
-        <div class="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent"></div>
-        <div class="absolute bottom-0 left-0 p-4 text-white">
-          <div class="text-xs sm:text-sm tracking-[0.2em] font-semibold text-accent mb-1">MAIZE</div>
-          <div class="text-lg sm:text-xl md:text-2xl font-medium font-shadows">Fresh Corn</div>
-        </div>
-      </div>
-
-      <!-- Bottom right (CEREALS - Fresh Mandrains) -->
-      <div class="relative overflow-hidden rounded-xl shadow-lg group">
-        <img src="./images/g-5.png" alt="CEREALS - Fresh Mandrains" class="w-full h-full md:h-100 object-cover transition-transform duration-500 group-hover:scale-105">
-        <!-- Overlay -->
-        <div class="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent"></div>
-        <div class="absolute bottom-0 left-0 p-4 text-white">
-          <div class="text-xs sm:text-sm tracking-[0.2em] font-semibold text-accent mb-1">CEREALS</div>
-          <div class="text-lg sm:text-xl md:text-2xl font-medium font-shadows">Fresh Mandrains</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- AGRICULTURE MARKET BANNER -->
-<section class="relative bg-gray-100 py-16 sm:py-24">
-  <div class="container mx-auto px-4 sm:px-6">
-    <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
-      <!-- Left: Green content block -->
-      <div class="w-full lg:w-1/2 bg-primary text-white p-6 sm:p-8 rounded-xl shadow-lg space-y-6">
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug">Built the best agriculture market</h2>
-        <p class="text-sm sm:text-base leading-relaxed">
-          Give lady of they such they sure it. Me contained explained my education. Vulgar as hearts by garret. Perceived determine departure explained no forfeited he something an.
-        </p>
-        <a href="#" class="inline-block bg-white text-primary font-semibold px-6 py-3 rounded-full shadow hover:bg-gray-100 transition-colors">
-          DISCOVER MORE
-        </a>
-      </div>
-
-      <!-- Right: Vegetable basket image -->
-      <div class="w-full lg:w-1/2 flex justify-center items-center">
-        <img src="./images/13.png.png" alt="Fresh Produce Basket" class="w-full max-w-md rounded-xl shadow-lg">
-      </div>
-    </div>
-
-    <!-- Bottom Logos -->
-    <div class="flex flex-wrap justify-center items-center gap-6 sm:gap-8 lg:gap-12 mt-12">
-      <img src="./images/logo-1.png" alt="All Natural Organic" class="h-10 sm:h-14 w-auto">
-      <img src="./images/logo-2.png" alt="Farm + Barn" class="h-10 sm:h-14 w-auto">
-      <img src="./images/logo-3.png" alt="Since 1999 Farm" class="h-10 sm:h-14 w-auto">
-    </div>
-  </div>
-</section>
-
-<!-- BLOG SECTION -->
-<section class="bg-white py-16 sm:py-24">
-  <div class="container mx-auto px-4 sm:px-6">
-    <!-- Section Header -->
-    <div class="text-center mb-12">
-      <h2 class="text-xl sm:text-2xl font-bold text-primary mb-2 font-shadows">Latest News</h2>
-      <p class="text-3xl sm:text-4xl md:text-5xl text-gray-800">Check out our blog posts</p>
-    </div>
-
-    <!-- Grid -->
-    <div class="flex flex-col lg:flex-row gap-8">
-      <!-- Left: image with text overlay -->
-      <article class="w-full lg:w-1/3 group relative rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
-        <div class="relative w-full h-96">
-          <img src="./images/blog-1.png" alt="Wheat field" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-linear-to-t from-black/70 via-black/40 to-transparent"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-6 text-white space-y-3">
-            <h3 class="text-lg font-semibold leading-snug">
-              Miscovery incommode earnestly commanded if.
-            </h3>
-            <p class="text-sm leading-relaxed opacity-90">
-              Seeing rather her you not esteem men settle genius excuse. Deal say over you age from.
-            </p>
-            <a href="#" class="inline-flex items-center font-semibold text-xs tracking-wider text-accent hover:text-white transition-colors">
-              CONTINUE READING →
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Right column: two cards -->
-      <div class="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Post 2 -->
-        <article class="group rounded-xl overflow-hidden bg-white shadow-md hover:shadow-lg transition">
-          <div class="relative w-full h-60 sm:h-72">
-            <img src="./images/blog-2.png" alt="Woman holding vegetables" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-            <div class="absolute top-4 left-4 bg-white px-3 py-1 rounded-md shadow">
-              <span class="text-xl font-bold">26</span>
-            </div>
-          </div>
-          <div class="p-6 space-y-3">
-            <div class="text-xs text-gray-500">
-              <span class="font-semibold text-gray-700">26 Aug, 2023</span> • 
-              <span>Md Sohag</span>
-            </div>
-            <h3 class="text-lg font-semibold text-gray-800 leading-snug">
-              Expression acceptance imprudence particular
-            </h3>
-            <a href="#" class="inline-block text-primary font-semibold text-sm tracking-wide hover:text-green-800 transition-colors">
-              CONTINUE READING →
-            </a>
-          </div>
-        </article>
-
-        <!-- Post 3 -->
-        <article class="group rounded-xl overflow-hidden bg-white shadow-md hover:shadow-lg transition">
-          <div class="relative w-full h-60 sm:h-72">
-            <img src="./images/blog-1.png" alt="Blog image" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-            <div class="absolute top-4 left-4 bg-white px-3 py-1 rounded-md shadow">
-              <span class="text-xl font-bold">26</span>
-            </div>
-          </div>
-          <div class="p-6 space-y-3">
-            <div class="text-xs text-gray-500">
-              <span class="font-semibold text-gray-700">Md Sohag</span> • 25 April, 2023
-            </div>
-            <h3 class="text-lg font-semibold text-gray-800 leading-snug">
-              Expression acceptance imprudence particular
-            </h3>
-            <a href="#" class="inline-block text-primary font-semibold text-sm tracking-wide hover:text-green-800 transition-colors">
-              CONTINUE READING →
-            </a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER SECTION -->
-<footer class="bg-gray-900 text-white pt-12 sm:pt-20 pb-10">
-  <div class="container mx-auto px-4 sm:px-6">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
-      <!-- Column 1: Branding & Social -->
-      <div class="space-y-6 text-center sm:text-left">
-        <img src="./images/logo-home.png" alt="Agrios Logo" class="h-24 sm:h-32 w-auto mx-auto sm:mx-0">
-        <p class="text-sm text-gray-300 leading-relaxed">
-          There are many variations of passages of lorem ipsum available, but the majority suffered.
-        </p>
-        <div class="flex justify-center sm:justify-start gap-5">
-          <a href="#" class="text-white hover:text-primary text-xl transition-colors"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="text-white hover:text-primary text-xl transition-colors"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="text-white hover:text-primary text-xl transition-colors"><i class="fab fa-pinterest-p"></i></a>
-          <a href="#" class="text-white hover:text-primary text-xl transition-colors"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-
-      <!-- Column 2: Explore -->
-      <div class="text-center sm:text-left">
-        <h4 class="text-lg font-semibold mb-6">Explore</h4>
-        <ul class="space-y-3 text-sm text-gray-300">
-          <li><a href="#" class="hover:text-primary transition-colors">About</a></li>
-          <li><a href="#" class="hover:text-primary transition-colors">Services</a></li>
-          <li><a href="#" class="hover:text-primary transition-colors">Our Projects</a></li>
-          <li><a href="#" class="hover:text-primary transition-colors">Meet the Farmers</a></li>
-          <li><a href="#" class="hover:text-primary transition-colors">Latest News</a></li>
-          <li><a href="#" class="hover:text-primary transition-colors">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 3: News -->
-      <div class="text-center sm:text-left">
-        <h4 class="text-lg font-semibold mb-6">News</h4>
-        <div class="space-y-5 text-sm text-gray-300">
-          <div>
-            <p class="font-medium text-white">Bringing Food Production Back To Cities</p>
-            <span class="text-xs text-gray-400">July 5, 2022</span>
-          </div>
-          <div>
-            <p class="font-medium text-white">The Future of Farming, Smart Irrigation Solutions</p>
-            <span class="text-xs text-gray-400">July 5, 2022</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Column 4: Contact -->
-      <div class="text-center sm:text-left">
-        <h4 class="text-lg font-semibold mb-6">Contact</h4>
-        <ul class="space-y-4 text-sm text-gray-300">
-          <li>Phone: <span class="text-white">666 888 0000</span></li>
-          <li>Email: <span class="text-white">needhelp@company.com</span></li>
-          <li>Address: <span class="text-white">80 broklyn golden street line, New York, USA</span></li>
-        </ul>
-        <form class="mt-6 flex max-w-sm mx-auto sm:mx-0">
-          <input type="email" placeholder="Your email" 
-                 class="w-full px-4 py-2 rounded-l-md bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary">
-          <button type="submit" 
-                  class="bg-primary px-4 py-2 rounded-r-md text-white font-semibold hover:bg-green-700 transition-colors">
-            Send
+          <!-- BUTTON -->
+          <button
+            class="mt-8 bg-accent text-black font-medium px-8 py-4 rounded-md hover:bg-[#eab84f] transition-colors">
+            Discover More
           </button>
-        </form>
+        </div>
+
+        <!-- RIGHT FLOATING CARD -->
+        <div class="w-full lg:w-1/3">
+          <div class="bg-gray-50/20 rounded-xl p-8 shadow-lg max-w-sm mx-auto">
+            <ul class="space-y-6">
+              <li class="flex items-center gap-5">
+                <img src="./images/blueberry.png" class="w-12 h-12 object-contain" alt="Blueberry">
+                <span class="text-xl text-gray-800 font-medium">Blueberry</span>
+              </li>
+              <li class="flex items-center gap-5">
+                <img src="./images/strawberry.png" class="w-12 h-12 object-contain" alt="Strawberry">
+                <span class="text-xl text-gray-800 font-medium">Strawberry</span>
+              </li>
+              <li class="flex items-center gap-5">
+                <img src="./images/maize.png" class="w-12 h-12 object-contain" alt="Maize">
+                <span class="text-xl text-gray-800 font-medium">Maize</span>
+              </li>
+              <li class="flex items-center gap-5">
+                <img src="./images/apple.png" class="w-12 h-12 object-contain" alt="Apples">
+                <span class="text-xl text-gray-800 font-medium">Apples</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- Bottom Bar -->
-    <div class="mt-12 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
-      <p>© All Copyright 2024 by shawonetc Themes</p>
-      <div class="mt-2 space-x-4">
-        <a href="#" class="hover:text-white transition-colors">Terms of Use</a>
-        <span>|</span>
-        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+  <!-- WHY CHOOSE US -->
+  <section class="min-h-150">
+    <div class="flex flex-col lg:flex-row">
+      <!-- LEFT GREEN PANEL -->
+      <div class="bg-primary w-full lg:w-1/2 px-6 sm:px-10 lg:px-20 py-12 sm:py-20">
+        <div class="max-w-xl mx-auto space-y-10">
+          <!-- ITEM -->
+          <div class="flex flex-col sm:flex-row gap-5 items-center sm:items-start text-center sm:text-left">
+            <div class="shrink-0">
+              <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+                <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8.25 8.25a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414l3.293 3.293 7.543-7.543a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-white text-xl font-semibold mb-2">Always Fresh</h4>
+              <p class="text-white/90">
+                Continued at up to zealously necessary breakfast. Surrounded sir
+                motionless she end literature.
+              </p>
+            </div>
+          </div>
+
+          <!-- ITEM -->
+          <div class="flex flex-col sm:flex-row gap-5 items-center sm:items-start text-center sm:text-left">
+            <div class="shrink-0">
+              <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+                <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8.25 8.25a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414l3.293 3.293 7.543-7.543a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-white text-xl font-semibold mb-2">All Organic</h4>
+              <p class="text-white/90">
+                Continued at up to zealously necessary breakfast. Surrounded sir
+                motionless she end literature.
+              </p>
+            </div>
+          </div>
+
+          <!-- ITEM -->
+          <div class="flex flex-col sm:flex-row gap-5 items-center sm:items-start text-center sm:text-left">
+            <div class="shrink-0">
+              <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+                <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8.25 8.25a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414l3.293 3.293 7.543-7.543a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-white text-xl font-semibold mb-2">Eco Friendly</h4>
+              <p class="text-white/90">
+                Continued at up to zealously necessary breakfast. Surrounded sir
+                motionless she end literature.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT BLACK PANEL -->
+      <div class="bg-white w-full lg:w-1/2 px-6 sm:px-10 lg:px-20 py-12 sm:py-20">
+        <div class="flex flex-col lg:flex-row gap-12 items-center">
+          <!-- TEXT + STATS -->
+          <div class="text-center lg:text-left">
+            <p class="text-primary mb-4 text-2xl font-shadows">
+              Why Choose Us
+            </p>
+
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight mb-8">
+              Growing crops and <br> raising livestock.
+            </h2>
+
+            <div class="flex flex-col sm:flex-row gap-10 justify-center lg:justify-start">
+              <div class="text-center">
+                <h3 class="text-5xl font-bold text-accent">38K</h3>
+                <p class="text-gray-500 mt-2">Trusted Customers</p>
+              </div>
+
+              <div class="text-center">
+                <h3 class="text-5xl font-bold text-accent">28M</h3>
+                <p class="text-gray-500 mt-2">Growth Tons of Harvest</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- IMAGE WITH PLAY BUTTON -->
+          <div class="relative w-full max-w-md">
+            <img src="./images/4.jpg.png" alt="Video" class="rounded-lg w-full h-75 sm:h-80 object-cover" />
+
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div
+                class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-accent flex items-center justify-center shadow-lg cursor-pointer hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 sm:w-8 sm:h-8 text-black ml-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M6 4l10 6-10 6V4z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
+  </section>
 
-<!-- ================= SCRIPT ================= -->
-<script>
-  // Mobile menu functionality
-  const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
+  <!-- PRODUCT SECTION -->
+  <section class="py-16 sm:py-24 bg-gray-50 bg-no-repeat bg-center bg-cover"
+    style="background-image: url('./images/bg-3.png');">
 
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-    mobileMenu.classList.toggle('flex');
-  });
+    <div class="container mx-auto px-4 sm:px-6">
 
-  // Close mobile menu when clicking outside
-  document.addEventListener('click', (event) => {
-    if (!menuBtn.contains(event.target) && !mobileMenu.contains(event.target)) {
-      mobileMenu.classList.add('hidden');
-      mobileMenu.classList.remove('flex');
+      <!-- TITLE -->
+      <h2 class="text-center text-3xl sm:text-4xl md:text-5xl font-medium text-yellow-800 mb-16 sm:mb-28 font-shadows">
+        Healthy Life With <br> Fresh Products
+      </h2>
+
+      <!-- GRID -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+        <!-- CARD -->
+        <div class="relative h-80 sm:h-96 rounded-2xl shadow-lg overflow-visible group">
+          <img src="./images/wheat.png" alt="Agriculture"
+            class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500">
+
+          <!-- FLOATING LABEL -->
+          <div
+            class="absolute left-1/2 -bottom-6 sm:-bottom-12 -translate-x-1/2 w-[90%] sm:w-[85%] bg-white rounded-xl shadow-md flex items-center gap-4 px-4 sm:px-6 py-4">
+            <div class="bg-primary w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-wheat-awn text-white text-lg sm:text-xl"></i>
+            </div>
+            <div>
+              <h4 class="text-lg sm:text-xl text-gray-800 font-shadows">
+                Agriculture
+              </h4>
+              <p class="text-primary text-xs sm:text-sm font-medium tracking-wide">
+                PRODUCTS
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="relative h-80 sm:h-96 rounded-2xl shadow-lg overflow-visible group">
+          <img src="./images/vegetables.png" alt="Fresh Vegetable"
+            class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500">
+
+          <div
+            class="absolute left-1/2 -bottom-6 sm:-bottom-12 -translate-x-1/2 w-[90%] sm:w-[85%] bg-white rounded-xl shadow-md flex items-center gap-4 px-4 sm:px-6 py-4">
+            <div class="bg-primary w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-carrot text-white text-lg sm:text-xl"></i>
+            </div>
+            <div>
+              <h4 class="text-lg sm:text-xl text-gray-800 font-shadows">
+                Fresh
+              </h4>
+              <p class="text-primary text-xs sm:text-sm font-medium tracking-wide">
+                VEGETABLE
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="relative h-80 sm:h-96 rounded-2xl shadow-lg overflow-visible group">
+          <img src="./images/honey.png" alt="Organic Products"
+            class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500">
+
+          <div
+            class="absolute left-1/2 -bottom-6 sm:-bottom-12 -translate-x-1/2 w-[90%] sm:w-[85%] bg-white rounded-xl shadow-md flex items-center gap-4 px-4 sm:px-6 py-4">
+            <div class="bg-primary w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-jar text-white text-lg sm:text-xl"></i>
+            </div>
+            <div>
+              <h4 class="text-lg sm:text-xl text-gray-800 font-shadows">
+                Organic
+              </h4>
+              <p class="text-primary text-xs sm:text-sm font-medium tracking-wide">
+                PRODUCTS
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FARMING SINCE SECTION -->
+  <section class="relative py-16 sm:py-32 bg-center bg-cover" style="background-image: url('./images/bg-4.png');">
+    <div class="absolute inset-0 bg-black/10"></div>
+    <div class="relative z-10 container mx-auto px-4 sm:px-6 text-center">
+      <!-- SMALL TOP TEXT -->
+      <p class="text-base sm:text-lg tracking-widest mb-4 text-gray-600 font-shadows">
+        Since 1866
+      </p>
+
+      <!-- MAIN TITLE -->
+      <h2 class="text-3xl sm:text-4xl md:text-6xl font-medium mb-6 leading-tight text-primary font-shadows">
+        Farming Have Been <br> Since 1866
+      </h2>
+
+      <!-- DECORATIVE LINE -->
+      <div class="flex justify-center mb-8">
+        <span class="w-24 h-1 bg-primary rounded-full"></span>
+      </div>
+
+      <!-- DESCRIPTION -->
+      <p class="max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed">
+        We are committed to providing fresh, organic, and sustainable agricultural
+        products grown with care and tradition passed down for generations.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="bg-white py-16 sm:py-24">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
+        <!-- Left: Image with FAQ overlay + logo -->
+        <div class="relative w-full lg:w-1/2 h-96 sm:h-125 overflow-hidden rounded-xl shadow-lg">
+          <img src="./images/f.png" alt="Combine Harvester in Field" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/40"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <h2
+              class="bg-primary/30 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-6xl sm:text-7xl md:text-8xl lg:text-[110px] font-extrabold tracking-widest uppercase leading-none text-shadow">
+              FAQ
+            </h2>
+          </div>
+          <div
+            class="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-primary px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow-lg">
+            <img src="./images/Link → logo-light.png.png" alt="Agrica Logo" class="h-8 sm:h-10 w-auto">
+          </div>
+        </div>
+
+        <!-- Right: FAQ Content -->
+        <div class="w-full lg:w-1/2 bg-gray-50 p-6 sm:p-8 rounded-xl shadow-md">
+          <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-6">Learn more about growing process</h3>
+
+          <div class="space-y-6">
+            <!-- Question 1: Expanded -->
+            <div>
+              <h4 class="text-base sm:text-lg font-semibold text-gray-700 mb-3">— What do you add to the soil before you
+                plant?</h4>
+              <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                Bennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr
+                apartments. Are off under fully death wrote cause her way spite. Plan upon yet way get cold spot its
+                week.
+              </p>
+            </div>
+
+            <!-- Question 2: Collapsed -->
+            <div>
+              <h4
+                class="text-base sm:text-lg font-semibold text-gray-700 cursor-pointer hover:text-primary transition-colors">
+                + Do you use herbicides?
+              </h4>
+            </div>
+
+            <!-- Question 3: Collapsed -->
+            <div>
+              <h4
+                class="text-base sm:text-lg font-semibold text-gray-700 cursor-pointer hover:text-primary transition-colors">
+                + Where does the water come on your crops?
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION - FIXED -->
+  <section class="bg-[#f5f8f5] py-16 sm:py-24">
+    <div class="container mx-auto px-4 sm:px-6">
+      <!-- Section Title -->
+      <div class="text-center mb-12">
+        <h2 class="text-xl sm:text-2xl font-bold text-primary mb-2 font-shadows">Awesome Gallery</h2>
+        <p class="text-3xl sm:text-4xl md:text-5xl text-gray-800">Explore Projects</p>
+      </div>
+
+      <!-- Collage Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+        <!-- Top left (FRUIT - Healthy Food) spans 2 columns -->
+        <div class="relative md:col-span-2 overflow-hidden rounded-xl shadow-lg group">
+          <img src="./images/hero.png" alt="FRUIT - Healthy Food"
+            class="w-full h-90 md:h-100 object-cover transition-transform duration-500 group-hover:scale-105">
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-4 sm:p-5 text-white">
+            <div class="text-xs sm:text-sm tracking-[0.2em] font-semibold text-accent mb-1">FRUIT</div>
+            <div class="text-lg sm:text-xl md:text-2xl font-medium font-shadows">Healthy Food</div>
+          </div>
+        </div>
+
+        <!-- Top right (VEGETABLES - Organic Vegetables) -->
+        <div class="relative overflow-hidden rounded-xl shadow-lg group">
+          <img src="./images/g-2.png" alt="VEGETABLES - Organic Vegetables"
+            class="w-full h-full md:h-100 object-cover transition-transform duration-500 group-hover:scale-105">
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-4 sm:p-5 text-white">
+            <div class="text-xs sm:text-sm tracking-[0.2em] font-semibold text-accent mb-1">VEGETABLES</div>
+            <div class="text-lg sm:text-xl md:text-2xl font-medium font-shadows">Organic Vegetables</div>
+          </div>
+        </div>
+
+
+        <div class="relative overflow-hidden rounded-xl shadow-lg group">
+          <img src="./images/g-3.png" alt="HAVEST - Crispy Cucumber"
+            class="w-full h-full md:h-100 object-cover transition-transform duration-500 group-hover:scale-105">
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-4 text-white">
+            <div class="text-xs sm:text-sm tracking-[0.2em] font-semibold text-accent mb-1">HAVEST</div>
+            <div class="text-lg sm:text-xl md:text-2xl font-medium font-shadows">Crispy Cucumber</div>
+          </div>
+        </div>
+
+
+        <div class="relative overflow-hidden rounded-xl shadow-lg group">
+          <img src="./images/g-4.png" alt="MAIZE - Fresh Corn"
+            class="w-full h-full md:h-100 object-cover transition-transform duration-500 group-hover:scale-105">
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-4 text-white">
+            <div class="text-xs sm:text-sm tracking-[0.2em] font-semibold text-accent mb-1">MAIZE</div>
+            <div class="text-lg sm:text-xl md:text-2xl font-medium font-shadows">Fresh Corn</div>
+          </div>
+        </div>
+
+
+        <div class="relative overflow-hidden rounded-xl shadow-lg group">
+          <img src="./images/g-5.png" alt="CEREALS - Fresh Mandrains"
+            class="w-full h-full md:h-100 object-cover transition-transform duration-500 group-hover:scale-105">
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-4 text-white">
+            <div class="text-xs sm:text-sm tracking-[0.2em] font-semibold text-accent mb-1">CEREALS</div>
+            <div class="text-lg sm:text-xl md:text-2xl font-medium font-shadows">Fresh Mandrains</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGRICULTURE MARKET BANNER -->
+  <section class="relative py-16 sm:py-24 bg-center bg-cover" style="background-image: url('./images/bg-5.png');">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+        <!-- Left: Green content block -->
+        <div
+          class="w-full lg:w-1/2 bg-primary/90 backdrop-blur-sm text-white p-6 sm:p-8 rounded-xl shadow-lg space-y-6 relative z-10">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug">Built the best agriculture market</h2>
+          <p class="text-sm sm:text-base leading-relaxed">
+            Give lady of they such they sure it. Me contained explained my education. Vulgar as hearts by garret.
+            Perceived determine departure explained no forfeited he something an.
+          </p>
+          <a href="#"
+            class="inline-block bg-white text-primary font-semibold px-6 py-3 rounded-full shadow hover:bg-gray-100 transition-colors">
+            DISCOVER MORE
+          </a>
+        </div>
+
+        <!-- Right: Vegetable basket image -->
+        <div class="w-full lg:w-1/2 flex justify-center items-center relative z-10">
+          <img src="./images/13.png.png" alt="Fresh Produce Basket" class="w-full max-w-md rounded-xl ">
+        </div>
+      </div>
+
+      <!-- Bottom Logos -->
+      <div class="flex flex-wrap justify-center items-center gap-6 sm:gap-8 lg:gap-12 mt-12 relative z-10">
+        <img src="./images/logo-1.png" alt="All Natural Organic" class="h-10 sm:h-14 w-auto">
+        <img src="./images/logo-2.png" alt="Farm + Barn" class="h-10 sm:h-14 w-auto">
+        <img src="./images/logo-3.png" alt="Since 1999 Farm" class="h-10 sm:h-14 w-auto">
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG SECTION -->
+  <section class="bg-white py-16 sm:py-24">
+    <div class="container mx-auto px-4 sm:px-6">
+      <!-- Section Header -->
+      <div class="text-center mb-12">
+        <h2 class="text-xl sm:text-2xl font-bold text-primary mb-2 font-shadows">Latest News</h2>
+        <p class="text-3xl sm:text-4xl md:text-5xl text-gray-800">Check out our blog posts</p>
+      </div>
+
+      <!-- Grid -->
+      <div class="flex flex-col lg:flex-row gap-8">
+        <!-- Left: image with text overlay -->
+        <article class="w-full lg:w-1/3 group relative rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+          <div class="relative w-full h-96">
+            <img src="./images/blog-1.png" alt="Wheat field" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-linear-to-t from-black/70 via-black/40 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white space-y-3">
+              <h3 class="text-lg font-semibold leading-snug">
+                Miscovery incommode earnestly commanded if.
+              </h3>
+              <p class="text-sm leading-relaxed opacity-90">
+                Seeing rather her you not esteem men settle genius excuse. Deal say over you age from.
+              </p>
+              <a href="#"
+                class="inline-flex items-center font-semibold text-xs tracking-wider text-accent hover:text-white transition-colors">
+                CONTINUE READING →
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Right column: two cards -->
+        <div class="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Post 2 -->
+          <article class="group rounded-xl overflow-hidden bg-white shadow-md hover:shadow-lg transition">
+            <div class="relative w-full h-60 sm:h-72">
+              <img src="./images/blog-2.png" alt="Woman holding vegetables"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+              <div class="absolute top-4 left-4 bg-white px-3 py-1 rounded-md shadow">
+                <span class="text-xl font-bold">26</span>
+              </div>
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="text-xs text-gray-500">
+                <span class="font-semibold text-gray-700">26 Aug, 2023</span> •
+                <span>Md Sohag</span>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-800 leading-snug">
+                Expression acceptance imprudence particular
+              </h3>
+              <a href="#"
+                class="inline-block text-primary font-semibold text-sm tracking-wide hover:text-green-800 transition-colors">
+                CONTINUE READING →
+              </a>
+            </div>
+          </article>
+
+          <!-- Post 3 -->
+          <article class="group rounded-xl overflow-hidden bg-white shadow-md hover:shadow-lg transition">
+            <div class="relative w-full h-60 sm:h-72">
+              <img src="./images/blog-1.png" alt="Blog image"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+              <div class="absolute top-4 left-4 bg-white px-3 py-1 rounded-md shadow">
+                <span class="text-xl font-bold">26</span>
+              </div>
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="text-xs text-gray-500">
+                <span class="font-semibold text-gray-700">Md Sohag</span> • 25 April, 2023
+              </div>
+              <h3 class="text-lg font-semibold text-gray-800 leading-snug">
+                Expression acceptance imprudence particular
+              </h3>
+              <a href="#"
+                class="inline-block text-primary font-semibold text-sm tracking-wide hover:text-green-800 transition-colors">
+                CONTINUE READING →
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER SECTION -->
+  <footer class="bg-gray-900 text-white pt-12 sm:pt-20 pb-10">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
+        <!-- Column 1: Branding & Social -->
+        <div class="space-y-6 text-center sm:text-left">
+          <img src="./images/logo-home.png" alt="Agrios Logo" class="h-24 sm:h-32 w-auto mx-auto sm:mx-0">
+          <p class="text-sm text-gray-300 leading-relaxed">
+            There are many variations of passages of lorem ipsum available, but the majority suffered.
+          </p>
+          <div class="flex justify-center sm:justify-start gap-5">
+            <a href="#" class="text-white hover:text-primary text-xl transition-colors"><i
+                class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white hover:text-primary text-xl transition-colors"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white hover:text-primary text-xl transition-colors"><i
+                class="fab fa-pinterest-p"></i></a>
+            <a href="#" class="text-white hover:text-primary text-xl transition-colors"><i
+                class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Explore -->
+        <div class="text-center sm:text-left">
+          <h4 class="text-lg font-semibold mb-6">Explore</h4>
+          <ul class="space-y-3 text-sm text-gray-300">
+            <li><a href="#" class="hover:text-primary transition-colors">About</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Services</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Our Projects</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Meet the Farmers</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Latest News</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: News -->
+        <div class="text-center sm:text-left">
+          <h4 class="text-lg font-semibold mb-6">News</h4>
+          <div class="space-y-5 text-sm text-gray-300">
+            <div>
+              <p class="font-medium text-white">Bringing Food Production Back To Cities</p>
+              <span class="text-xs text-gray-400">July 5, 2022</span>
+            </div>
+            <div>
+              <p class="font-medium text-white">The Future of Farming, Smart Irrigation Solutions</p>
+              <span class="text-xs text-gray-400">July 5, 2022</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 4: Contact -->
+        <div class="text-center sm:text-left">
+          <h4 class="text-lg font-semibold mb-6">Contact</h4>
+          <ul class="space-y-4 text-sm text-gray-300">
+            <li>Phone: <span class="text-white">666 888 0000</span></li>
+            <li>Email: <span class="text-white">needhelp@company.com</span></li>
+            <li>Address: <span class="text-white">80 broklyn golden street line, New York, USA</span></li>
+          </ul>
+          <form class="mt-6 flex max-w-sm mx-auto sm:mx-0">
+            <input type="email" placeholder="Your email"
+              class="w-full px-4 py-2 rounded-l-md bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary">
+            <button type="submit"
+              class="bg-primary px-4 py-2 rounded-r-md text-white font-semibold hover:bg-green-700 transition-colors">
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="mt-12 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+        <p>© All Copyright 2024 by shawonetc Themes</p>
+        <div class="mt-2 space-x-4">
+          <a href="#" class="hover:text-white transition-colors">Terms of Use</a>
+          <span>|</span>
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPT ================= -->
+  <script>
+    // Simple mobile menu toggle
+    document.getElementById('menu-btn').onclick = function () {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
     }
-  });
 
-  // Close mobile menu on escape key
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
-      mobileMenu.classList.add('hidden');
-      mobileMenu.classList.remove('flex');
-    }
-  });
-</script>
+    // Close menu when clicking anywhere outside
+    document.addEventListener('click', function (event) {
+      var menu = document.getElementById('mobile-menu');
+      var btn = document.getElementById('menu-btn');
+
+      if (!menu.contains(event.target) && !btn.contains(event.target) && !menu.classList.contains('hidden')) {
+        menu.classList.add('hidden');
+      }
+    });
+  </script>
 </body>
+
 </html>

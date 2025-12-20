@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Agrios</title>
+
+  <!-- Your compiled Tailwind CSS -->
+  <link href="/dist/output.css" rel="stylesheet">
+</head>
+
+<body class="font-sans text-gray-700">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-none backdrop-blur-sm shadow-sm">
+    <div class="container mx-auto px-4 sm:px-6 flex items-center justify-between h-20">
+      <!-- Logo -->
+      <div class="flex items-center gap-3 z-50">
+        <img src="./images/logo-home.png" alt="Agrinos Logo" class="h-12 sm:h-16 w-auto">
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-green-400">
+        <a href="#" class="hover:text-primary transition-colors">Home</a>
+        <a href="#" class="hover:text-primary transition-colors">About</a>
+        <a href="#" class="flex items-center gap-1 hover:text-primary transition-colors">
+          Solutions <span class="text-xs">▼</span>
+        </a>
+        <a href="#" class="flex items-center gap-1 hover:text-primary transition-colors">
+          Products <span class="text-xs">▼</span>
+        </a>
+        <a href="#" class="flex items-center gap-1 hover:text-primary transition-colors">
+          Science <span class="text-xs">▼</span>
+        </a>
+        <a href="#" class="flex items-center gap-1 hover:text-primary transition-colors">
+          Shop <span class="text-xs">▼</span>
+        </a>
+        <a href="#" class="hover:text-primary transition-colors">Contact</a>
+      </nav>
+
+      <!-- Desktop Icons -->
+      <div class="hidden lg:flex items-center gap-6 text-dark text-sm">
+        <button class="hover:text-primary transition-colors">
+          <i class="fas fa-search"></i>
+        </button>
+        <button class="relative hover:text-primary transition-colors">
+          <i class="fas fa-shopping-cart"></i>
+          <span
+            class="absolute -top-2 -right-3 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+        </button>
+        <div class="flex items-center gap-2 text-gray-400">
+          <i class="fas fa-user text-lg"></i>
+          <span>Welcome, <strong>Hi</strong> (guest_user)</span>
+        </div>
+      </div>
+
+      <!-- Mobile Burger Button - Fixed positioning -->
+      <button id="menu-btn" class="lg:hidden text-primary text-3xl focus:outline-none z-50">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    
+    <div id="mobile-menu" class="hidden fixed inset-0 w-full h-screen z-40">
+      <!-- Background overlay -->
+      <div class="absolute inset-0 bg-black/80"></div>
+
+      <!-- Close button -->
+      <button onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+        class="absolute top-24 right-6 text-white hover:text-accent text-3xl z-50">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <!-- Menu content container - starts right after navbar -->
+      <div class="relative h-full flex flex-col pt-20 px-6">
+        <!-- Navigation Links -->
+        <div class="flex-1 flex flex-col justify-center items-center">
+          <div class="w-full max-w-md text-center space-y-4 ">
+            <a href="/index.html"
+              class="block py-4 text-2xl font-semibold text-white hover:text-primary transition-colors">Home</a>
+            <a href="#/about.html"
+              class="block py-4 text-2xl font-semibold text-white hover:text-primary transition-colors">About</a>
+            <a href="/solutions.html"
+              class="block py-4 text-2xl font-semibold text-white hover:text-primary transition-colors">Solutions</a>
+            <a href="#"
+              class="block py-4 text-2xl font-semibold text-white hover:text-primary transition-colors">Products</a>
+            <a href="#"
+              class="block py-4 text-2xl font-semibold text-white hover:text-primary transition-colors">Science</a>
+            <a href="#"
+              class="block py-4 text-2xl font-semibold text-white hover:text-primary transition-colors">Shop</a>
+            <a href="#"
+              class="block py-4 text-2xl font-semibold text-white hover:text-primary transition-colors">Contact</a>
+          </div>
+        </div>
+
+        <!-- Bottom Icons with FIXED basket count position -->
+        <div class="pb-12 pt-8 border-t border-white/30">
+          <div class="flex justify-center items-center gap-8">
+            <button class="text-white hover:text-accent text-2xl transition-colors">
+              <i class="fas fa-search"></i>
+            </button>
+            <button class="relative text-white hover:text-accent text-2xl transition-colors">
+              <i class="fas fa-shopping-cart"></i>
+              <!-- FIXED basket count position -->
+              <span
+                class="absolute -top-4 -right-2.5 bg-primary text-black text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">0</span>
+            </button>
+            <div class="flex items-center gap-3 text-white text-lg">
+              <i class="fas fa-user text-primary"></i>
+              <span>Welcome, <strong class="text-primary">Guest</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+<!-- ================= HERO ================= -->
+<section class="relative h-[320px] bg-cover bg-center"
+  style="background-image:url('/images/about-bg.png')">
+
+  <div class="absolute inset-0 bg-black/30"></div>
+
+  <div class="relative z-10 flex flex-col items-center justify-center h-full text-white">
+    <p class="text-sm uppercase tracking-widest opacity-80">Home / About</p>
+    <h1 class="text-4xl md:text-5xl font-bold mt-2">About</h1>
+  </div>
+</section>
+
+<!-- ================= ABOUT SECTION ================= -->
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+
+    <!-- Image block -->
+    <div class="relative">
+      <img src="/images/about-1.png" class="rounded-xl w-full">
+      <img src="/images/about-sm-2.png"
+        class="absolute -bottom-12 -left-12 w-48 rounded-xl shadow-xl hidden md:block">
+    </div>
+
+    <!-- Content -->
+    <div>
+      <span class="text-green-600 uppercase tracking-wide font-semibold text-sm">
+        Get to know us
+      </span>
+
+      <h2 class="text-4xl font-bold text-gray-900 mt-3">
+        The Best Agriculture Market
+      </h2>
+
+      <p class="mt-4 text-green-600 font-medium">
+        There are many variations of passa of lorem available,
+        but the majority have suffered alteration.
+      </p>
+
+      <p class="mt-4 text-gray-600 leading-relaxed">
+        There are many variations of passages of lorem ipsum available but the
+        majority have suffered alteration in some form by injected humor or
+        random word which don't look even.
+      </p>
+
+      <ul class="mt-6 space-y-3">
+        <li class="flex items-center gap-3">
+          <span class="w-5 h-5 bg-green-600 text-white rounded-full flex items-center justify-center text-xs">✓</span>
+          <span>Suspe ndisse suscipit sagittis leo</span>
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="w-5 h-5 bg-green-600 text-white rounded-full flex items-center justify-center text-xs">✓</span>
+          <span>Entum estibulum disgnissim posuere</span>
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="w-5 h-5 bg-green-600 text-white rounded-full flex items-center justify-center text-xs">✓</span>
+          <span>Lorem Ipsum on the tend to repeat</span>
+        </li>
+      </ul>
+
+      <button class="mt-8 bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-md font-semibold transition">
+        Discover More
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VIDEO SECTION ================= -->
+<section class="relative h-[480px] bg-cover bg-center"
+  style="background-image:url('/images/about-bg-2.png')">
+
+  <div class="absolute inset-0 bg-black/60"></div>
+
+  <div class="relative z-10 h-full flex flex-col items-center justify-center text-center text-white px-6">
+    <div
+                class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-accent flex items-center justify-center shadow-lg cursor-pointer hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 sm:w-8 sm:h-8 text-black ml-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M6 4l10 6-10 6V4z" />
+                </svg>
+              </div>
+
+    <h2 class="text-3xl md:text-4xl font-bold max-w-2xl text-popping mt-6">
+      ECO-Friendly Products can be Made from Scratch
+    </h2>
+  </div>
+
+  <!-- Stats bar -->
+  <div class="absolute bottom-0 left-0 w-full bg-black/80 text-white py-6">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <h3 class="text-3xl font-bold">6420</h3>
+        <p class="text-sm opacity-80">Agriculture Products</p>
+      </div>
+      <div>
+        <h3 class="text-3xl font-bold">8800</h3>
+        <p class="text-sm opacity-80">Projects Completed</p>
+      </div>
+      <div>
+        <h3 class="text-3xl font-bold">9960</h3>
+        <p class="text-sm opacity-80">Satisfied Clients</p>
+      </div>
+      <div>
+        <h3 class="text-3xl font-bold">360</h3>
+        <p class="text-sm opacity-80">Experts Farmers</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="py-24 bg-[#f8f6ef]">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <span class="text-green-600 uppercase font-semibold text-sm">
+      Our Testimonials
+    </span>
+
+    <h2 class="text-4xl font-bold text-gray-900 mt-2">
+      What They Say
+    </h2>
+
+    <div class="mt-16 grid md:grid-cols-2 gap-12">
+      <!-- Card -->
+      <div class="bg-white p-8 rounded-xl shadow">
+        <div class="flex items-center gap-4">
+          <img src="/images/human-1.png" class="w-14 h-14 rounded-full">
+          <div class="text-left">
+            <h4 class="font-bold text-gray-900">Bonnie Tolbert</h4>
+            <span class="text-sm text-gray-500">Customer</span>
+          </div>
+        </div>
+        <p class="mt-6 text-gray-600 leading-relaxed">
+          There are many variations of passages of available but the majority
+          have suffered alteration in some form by injected humor.
+        </p>
+      </div>
+
+      <div class="bg-white p-8 rounded-xl shadow">
+        <div class="flex items-center gap-4">
+          <img src="/images/human-2.png" class="w-14 h-14 rounded-full">
+          <div class="text-left">
+            <h4 class="font-bold text-gray-900">Sarah Albert</h4>
+            <span class="text-sm text-gray-500">Customer</span>
+          </div>
+        </div>
+        <p class="mt-6 text-gray-600 leading-relaxed">
+          There are many variations of passages of available but the majority
+          have suffered alteration in some form by injected humor.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FARMERS ================= -->
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <span class="text-green-600 uppercase font-semibold text-sm">
+      Team Members
+    </span>
+
+    <h2 class="text-4xl font-bold text-gray-900 mt-2">
+      Meet Our Farmers
+    </h2>
+
+    <div class="mt-16 grid md:grid-cols-3 gap-8">
+      <div class="rounded-xl overflow-hidden shadow">
+        <img src="/images/farmer-1.png" class="w-full h-72 object-cover">
+        <div class="p-4 bg-white">
+          <h4 class="font-bold">Kevin Smith</h4>
+          <span class="text-sm text-gray-500">Farmer</span>
+        </div>
+      </div>
+
+      <div class="rounded-xl overflow-hidden shadow">
+        <img src="/images/farmer-2.png" class="w-full h-72 object-cover">
+        <div class="p-4 bg-white">
+          <h4 class="font-bold">Jessica Brown</h4>
+          <span class="text-sm text-gray-500">Farmer</span>
+        </div>
+      </div>
+
+      <div class="rounded-xl overflow-hidden shadow">
+        <img src="/images/farmer-3.png" class="w-full h-72 object-cover">
+        <div class="p-4 bg-white">
+          <h4 class="font-bold">David Martin</h4>
+          <span class="text-sm text-gray-500">Farmer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- FOOTER SECTION -->
+  <footer class="bg-gray-900 text-white pt-12 sm:pt-20 pb-10">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
+        <!-- Column 1: Branding & Social -->
+        <div class="space-y-6 text-center sm:text-left">
+          <img src="./images/logo-home.png" alt="Agrios Logo" class="h-24 sm:h-32 w-auto mx-auto sm:mx-0">
+          <p class="text-sm text-gray-300 leading-relaxed">
+            There are many variations of passages of lorem ipsum available, but the majority suffered.
+          </p>
+          <div class="flex justify-center sm:justify-start gap-5">
+            <a href="#" class="text-white hover:text-primary text-xl transition-colors"><i
+                class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white hover:text-primary text-xl transition-colors"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white hover:text-primary text-xl transition-colors"><i
+                class="fab fa-pinterest-p"></i></a>
+            <a href="#" class="text-white hover:text-primary text-xl transition-colors"><i
+                class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Explore -->
+        <div class="text-center sm:text-left">
+          <h4 class="text-lg font-semibold mb-6">Explore</h4>
+          <ul class="space-y-3 text-sm text-gray-300">
+            <li><a href="#" class="hover:text-primary transition-colors">About</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Services</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Our Projects</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Meet the Farmers</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Latest News</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: News -->
+        <div class="text-center sm:text-left">
+          <h4 class="text-lg font-semibold mb-6">News</h4>
+          <div class="space-y-5 text-sm text-gray-300">
+            <div>
+              <p class="font-medium text-white">Bringing Food Production Back To Cities</p>
+              <span class="text-xs text-gray-400">July 5, 2022</span>
+            </div>
+            <div>
+              <p class="font-medium text-white">The Future of Farming, Smart Irrigation Solutions</p>
+              <span class="text-xs text-gray-400">July 5, 2022</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 4: Contact -->
+        <div class="text-center sm:text-left">
+          <h4 class="text-lg font-semibold mb-6">Contact</h4>
+          <ul class="space-y-4 text-sm text-gray-300">
+            <li>Phone: <span class="text-white">666 888 0000</span></li>
+            <li>Email: <span class="text-white">needhelp@company.com</span></li>
+            <li>Address: <span class="text-white">80 broklyn golden street line, New York, USA</span></li>
+          </ul>
+          <form class="mt-6 flex max-w-sm mx-auto sm:mx-0">
+            <input type="email" placeholder="Your email"
+              class="w-full px-4 py-2 rounded-l-md bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary">
+            <button type="submit"
+              class="bg-primary px-4 py-2 rounded-r-md text-white font-semibold hover:bg-green-700 transition-colors">
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="mt-12 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+        <p>© All Copyright 2024 by shawonetc Themes</p>
+        <div class="mt-2 space-x-4">
+          <a href="#" class="hover:text-white transition-colors">Terms of Use</a>
+          <span>|</span>
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPT ================= -->
+  <script>
+    // Simple mobile menu toggle
+    document.getElementById('menu-btn').onclick = function () {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+
+    // Close menu when clicking anywhere outside
+    document.addEventListener('click', function (event) {
+      var menu = document.getElementById('mobile-menu');
+      var btn = document.getElementById('menu-btn');
+
+      if (!menu.contains(event.target) && !btn.contains(event.target) && !menu.classList.contains('hidden')) {
+        menu.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

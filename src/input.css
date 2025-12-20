@@ -1,1 +1,44 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom utilities that match your original style */
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.transition-all-300 {
+  transition: all 0.3s ease;
+}
+
+/* Custom height utilities for responsive design */
+.h-100 { 
+  height: 28rem; 
+}
+.h-125 { 
+  height: 32rem; 
+}
+.h-150 { 
+  height: 40rem; 
+}
+.h-75 { 
+  height: 19rem; 
+}
+.h-90 { 
+  height: 24rem; 
+}
+
+@media (min-width: 768px) {
+  .h-100 { 
+    height: 32rem; 
+  }
+  .h-125 { 
+    height: 40rem; 
+  }
+  .h-150 { 
+    height: 50rem; 
+  }
+  .h-90 { 
+    height: 28rem; 
+  }
+}
