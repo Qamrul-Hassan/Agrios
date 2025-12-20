@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "dev": "npx tailwindcss -i ./src/input.css -o ./public/output.css --watch",
+    "build": "npx tailwindcss -i ./src/input.css -o ./public/output.css --minify",
     "vercel-build": "npm run build"
   },
   "devDependencies": {
