@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Your custom height classes are already in tailwind.config.js */
+/* No need to add them here again */
+
 /* Custom utilities that match your original style */
 .text-shadow {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
