@@ -1,7 +1,8 @@
 {
   "scripts": {
     "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "vercel-build": "npm run build"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.23",
